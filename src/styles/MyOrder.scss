@@ -3,12 +3,11 @@
 .MyOrder {
 	width: 360px;
 	padding: 24px;
-	box-sizing: border-box;
 	position: fixed;
 	right: 0;
-	background-color: white;
 	top: 60px;
 	bottom: 0;
+	background-color: white;
 	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
 }
@@ -22,6 +21,18 @@
 .title {
 	font-size: var(--lg);
 	font-weight: bold;
+}
+.order-list-products{
+	height: 450px;
+	overflow-y: scroll;
+}
+.my-buttons {
+	width: 100%;
+	padding: 24px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-color: var(--white);
 }
 .order {
 	display: grid;
@@ -45,7 +56,6 @@
 	text-align: end;
 	font-weight: bold;
 }
-
 .primary-button {
 	background-color: var(--hospital-green);
 	border-radius: 8px;

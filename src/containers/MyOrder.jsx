@@ -20,18 +20,22 @@ const MyOrder = () => {
 				<p className="title">My order</p>
 			</div>
 			<div className="my-order-content">
-				{state.cart.map(product => (
-					<OrderItem product={product} key={`orderItem-${product.id}`} />
-				))}
-				<div className="order">
-					<p>
-						<span>Total</span>
-					</p>
-					<p>$ {sumTotal()}</p>
+				<div className="order-list-products">
+					{state.cart.map(product => (
+						<OrderItem product={product} key={`orderItem-${product.id}`} />
+					))}
 				</div>
-				<button className="primary-button">
-					Checkout
-				</button>
+				<div className="my-buttons">
+					<div className="order">
+						<p>
+							<span>Total</span>
+						</p>
+						<p>$ {sumTotal()}</p>
+					</div>
+					<button className="primary-button">
+						Checkout
+					</button>
+				</div>
 			</div>
 		</aside>
 	);
