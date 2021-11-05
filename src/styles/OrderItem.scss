@@ -6,6 +6,10 @@
 	gap: 16px;
 	margin-bottom: 24px;
 	align-items: center;
+
+	.icon-close:hover {
+		cursor: pointer;
+	}
 }
 .OrderItem figure {
 	margin: 0;
