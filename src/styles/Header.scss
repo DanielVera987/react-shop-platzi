@@ -2,44 +2,57 @@
 
 nav {
     width: 100%;
+    height: 60px;
     background-color: #fff;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     position: fixed;
     top: 0px;
-    padding: 0 24px;
+    padding: 0px 24px;
     border-bottom: 1px solid var(--very-light-pink);
     z-index: 100;
 }
 
-.menu {
+.Navbar__title__icon__mobile {
     display: none;
 }
 
-.nav-logo {
+.Navbar__title__logo {
     width: 100px;
 }
 
-.navbar-left ul,
-.navbar-right ul {
+.Navbar__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.Navbar__container__title {
+    display: none;
+}
+
+.Navbar__container__left,
+.Navbar__container__right {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     align-items: center;
-    height: 60px;
 }
 
-.navbar-left {
+.Navbar__container__left {
     display: flex;
 }
 
-.navbar-left ul {
+.Navbar__container__left,
+.Navbar__container__right {
     margin-left: 12px;
 }
 
-.navbar-left ul li a,
-.navbar-right ul li a {
+.Navbar__container__left li a,
+.Navbar__container__right li a {
     text-decoration: none;
     color: var(--very-light-pink);
     border: 1px solid var(--white);
@@ -47,8 +60,8 @@ nav {
     border-radius: 8px;
 }
 
-.navbar-left ul li a:hover,
-.navbar-right ul li a:hover {
+.Navbar__container__left li a:hover,
+.Navbar__container__right li a:hover {
     border: 1px solid var(--hospital-green);
     color: var(--hospital-green);
 }
@@ -61,6 +74,10 @@ nav {
     :hover {
         cursor: pointer;
     }
+}
+
+.Navbar__container__sign {
+    display: none;
 }
 
 .navbar-shopping-cart {
@@ -87,15 +104,52 @@ nav {
 }
 
 @media (max-width: 640px) {
-    .menu {
+    .Navbar__title__icon__mobile {
         display: block;
     }
 
-    .navbar-left ul {
-        display: none;
+    .Navbar__title {
+        display: flex;
+        flex-direction: row;
     }
 
-    .navbar-email {
-        display: none;
+    .Navbar__title__icon__mobile {
+        margin-right: 10px;
+    }
+
+    .Navbar__container {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        bottom: 0px;
+    }
+
+    .Navbar__container__title {
+        padding: 10px;
+        margin-left: 20px;
+    }
+
+    .Navbar__container__title,
+    .Navbar__container__left,
+    .Navbar__container__right {
+        display: block;
+    }
+
+    .Navbar__container__left li,
+    .Navbar__container__right li{
+        margin: 10px;
+    }
+
+    .Navbar__container__right {
+        margin-top: 20px;
+    }
+
+    .Navbar__container__sign {
+        display: block;
+        color: var(--hospital-green);
     }
 }
